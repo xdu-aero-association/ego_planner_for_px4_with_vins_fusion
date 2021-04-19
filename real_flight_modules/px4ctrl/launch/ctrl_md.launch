@@ -1,0 +1,11 @@
+<launch>
+	<arg name="uavname" default="fpv" />
+
+	<node pkg="px4ctrl" type="px4ctrl_node" name="px4ctrl" output="screen">
+        <remap from="~odom" to="/vins_estimator/imu_propagate" />
+		<remap from="~cmd" to="/position_cmd" />
+
+        <rosparam command="load" file="$(find px4ctrl)/config/ctrl_param_$(arg uavname).yaml" />
+	</node>
+ 
+</launch>
