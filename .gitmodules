@@ -1,0 +1,4 @@
+[submodule "real_flight_modules/VINS-Fusion-gpu"]
+	path = real_flight_modules/VINS-Fusion-gpu
+	url = https://github.com/xdu-aero-association/VINS-Fusion-gpu
+	branch = main
